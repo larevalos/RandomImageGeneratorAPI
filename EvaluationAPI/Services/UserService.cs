@@ -1,0 +1,64 @@
+﻿using AutoMapper;
+using EvaluationAPI.Models;
+using Microsoft.AspNetCore.Identity;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
+
+namespace EvaluationAPI.Services
+{
+    public class UserService : IUserService
+    {
+        private readonly UserManager<UserEntity> _userManager;
+        private readonly IConfigurationProvider _mappingConfiguration;
+
+        public UserService(
+            UserManager<UserEntity> userManager,
+            IConfigurationProvider mappingConfiguration)
+        {
+            _userManager = userManager;
+            _mappingConfiguration = mappingConfiguration;
+        }
+
+
+        public async Task<(bool Succeeded, string ErrorMessage)> CreateUserAsync(
+            RegisterForm form)
+        {
+            var entity = new UserEntity
+            {
+                Email = form.Email,
+                UserName = form.Email,
+                FirstName = form.FirstName,
+                LastName = form.LastName,
+                CreatedAt = DateTimeOffset.UtcNow
+            };
+
+            var result = await _userManager.CreateAsync(entity, form.Password);
+            if (!result.Succeeded)
+            {
+                var firstError = result.Errors.FirstOrDefault()?.Description;
+                return (false, firstError);
+            }
+
+            return (true, null);
+        }
+
+        public async Task<User> GetUserAsync(ClaimsPrincipal user)
+        {
+            var entity = await _userManager.GetUserAsync(user);
+            var mapper = _mappingConfiguration.CreateMapper();
+
+            return mapper.Map<User>(entity);
+        }
+
+        public async Task<Guid?> GetUserIdAsync(ClaimsPrincipal principal)
+        {
+            var user = await _userManager.GetUserAsync(principal);
+            if (user == null) return null;
+
+            return user.Id;
+        }
+    }
+}

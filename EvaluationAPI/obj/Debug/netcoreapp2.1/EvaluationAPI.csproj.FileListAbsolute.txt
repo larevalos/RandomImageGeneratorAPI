@@ -1,0 +1,14 @@
+C:\Users\larev\source\repos\EvaluationAPI\EvaluationAPI\bin\Debug\netcoreapp2.1\EvaluationAPI.deps.json
+C:\Users\larev\source\repos\EvaluationAPI\EvaluationAPI\bin\Debug\netcoreapp2.1\EvaluationAPI.runtimeconfig.json
+C:\Users\larev\source\repos\EvaluationAPI\EvaluationAPI\bin\Debug\netcoreapp2.1\EvaluationAPI.runtimeconfig.dev.json
+C:\Users\larev\source\repos\EvaluationAPI\EvaluationAPI\bin\Debug\netcoreapp2.1\EvaluationAPI.dll
+C:\Users\larev\source\repos\EvaluationAPI\EvaluationAPI\bin\Debug\netcoreapp2.1\EvaluationAPI.pdb
+C:\Users\larev\source\repos\EvaluationAPI\EvaluationAPI\obj\Debug\netcoreapp2.1\EvaluationAPI.csprojAssemblyReference.cache
+C:\Users\larev\source\repos\EvaluationAPI\EvaluationAPI\obj\Debug\netcoreapp2.1\EvaluationAPI.csproj.CoreCompileInputs.cache
+C:\Users\larev\source\repos\EvaluationAPI\EvaluationAPI\obj\Debug\netcoreapp2.1\EvaluationAPI.RazorAssemblyInfo.cache
+C:\Users\larev\source\repos\EvaluationAPI\EvaluationAPI\obj\Debug\netcoreapp2.1\EvaluationAPI.RazorAssemblyInfo.cs
+C:\Users\larev\source\repos\EvaluationAPI\EvaluationAPI\obj\Debug\netcoreapp2.1\EvaluationAPI.AssemblyInfoInputs.cache
+C:\Users\larev\source\repos\EvaluationAPI\EvaluationAPI\obj\Debug\netcoreapp2.1\EvaluationAPI.AssemblyInfo.cs
+C:\Users\larev\source\repos\EvaluationAPI\EvaluationAPI\obj\Debug\netcoreapp2.1\EvaluationAPI.RazorTargetAssemblyInfo.cache
+C:\Users\larev\source\repos\EvaluationAPI\EvaluationAPI\obj\Debug\netcoreapp2.1\EvaluationAPI.dll
+C:\Users\larev\source\repos\EvaluationAPI\EvaluationAPI\obj\Debug\netcoreapp2.1\EvaluationAPI.pdb
