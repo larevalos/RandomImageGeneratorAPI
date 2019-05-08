@@ -16,10 +16,20 @@ in the link request.
 - Forcing Https in the server for security 
 - ASP.NET Core Identity implementation for information related with user account, with password hash etc
 
+### History
+- The history is user based, so it will display only the history of the connected user
+
 ## Additional notes:
 - The project was set to run only with https at https://localhost:44394
 - For using in postman you should disable SSL verification as the https certificate is not signed. (File > Settings > turn off SSL certificate verification)
+- For getting random images is not necessary to use token (it is open), but for history token is required
 
 
 ## Database
 The database is hosted on AWS using aws RDS, if you need to access it the connection string with my credential is in appsettings.json
+
+
+## Improvements 
+- Now the random image endpoint display images that the user have already liked/disliked as the requirements did'nt specify how to do it.
+## Other posibles implementetion of this
+- Could be filtering the liked/disliked images and only show new images
