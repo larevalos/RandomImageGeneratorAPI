@@ -20,3 +20,6 @@ in the link request.
 - The project was set to run only with https at https://localhost:44394
 - For using in postman you should disable SSL verification as the https certificate is not signed. (File > Settings > turn off SSL certificate verification)
 
+
+## Database
+The database is hosted on AWS using aws RDS, if you need to access it the connection string with my credential is in appsettings.json
