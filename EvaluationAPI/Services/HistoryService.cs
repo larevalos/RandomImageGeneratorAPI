@@ -54,7 +54,9 @@ namespace EvaluationAPI.Services
                     Liked = lh.Liked,
                     UserGuid = lh.UserGuid,
                     LastUpdate = lh.LastUpdate
-                }).Where(r => r.UserGuid == userId);
+                }).Where(r => r.UserGuid == userId)
+                .Skip(pagingOptions.Offset.Value)
+                .Take(pagingOptions.Limit.Value);
   
             //check
             var allHistory = await query.ToListAsync();

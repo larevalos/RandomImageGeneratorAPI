@@ -22,6 +22,12 @@ namespace EvaluationAPI.Infraestructure
                     Link.To(nameof(Controllers.UsersController.GetUserById),
                     new { userId = src.Id })));
 
+            CreateMap<HistoryEntity, History>()
+            .ForMember(dest => dest.Self, opt => opt.MapFrom(src =>
+              Link.To(
+                  "history",
+                  new { histortId= src.Id })));
+
 
 
         }
